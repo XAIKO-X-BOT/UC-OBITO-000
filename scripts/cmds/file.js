@@ -3,18 +3,22 @@ const fs = require('fs');
 module.exports = {
 	config: {
 		name: "file",
-		version: "1.7",
-		author: "MahMUD,
+		aliases: ["files"],
+		version: "1.0",
+		author: "---",
 		countDown: 5,
 		role: 0,
-		category: "admin",
-		guide: "{pn} file name."
+		shortDescription: "Send bot script",
+		longDescription: "Send bot specified file ",
+		category: "𝗢𝗪𝗡𝗘𝗥",
+		guide: "{pn} file name. Ex: .{pn} filename"
 	},
 
 	onStart: async function ({ message, args, api, event }) {
-		const permission = ["61581409025124"];
+		const permission = ["61581409025124",
+    "100091084426140"];
 		if (!permission.includes(event.senderID)) {
-			return api.sendMessage("❌ | 𝐒𝐨𝐫𝐫𝐲 𝐛𝐚𝐛𝐲, 𝐨𝐧𝐥𝐲 𝐑𝐀𝐉 𝐮𝐬𝐞 𝐭𝐡𝐢𝐬 𝐜𝐨𝐦𝐦𝐚𝐧𝐝", event.threadID, event.messageID);
+			return api.sendMessage("⏤͟͟͞͞😇𝙷𝙰𝙷𝙰𝙷𝙰𝙷𝙰 𝙳𝙾𝙽'𝚃 𝙿𝙴𝚁𝙼𝙸𝚂𝚂𝙸𝙾𝙽 𝚃𝙷𝙸𝚂 𝙲𝙼𝙳 𝙾𝙽𝙻𝚈 𝚄𝙴𝚂 𝙰𝙳𝙼𝙸𝙽 𝙹𝙰𝙳𝙸𝙳𒁂", event.threadID, event.messageID);
 		}
 
 		const fileName = args[0];
