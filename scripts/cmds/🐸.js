@@ -1,7 +1,6 @@
 module.exports = {
     config: {
         name: "🐸",
-        aliases: ["🐸🐸"‚🐸💔"]
         version: "1.0",
         author: "Jadid", //** original author fb I'd : https://C.E.O.NOBITA.2021 **//
         countDown: 5,
