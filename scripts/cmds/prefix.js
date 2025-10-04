@@ -5,39 +5,18 @@ module.exports = {
 	config: {
 		name: "prefix",
 		version: "1.4",
-		author: "NTKhang",
+		author: "jadid",//editing by ArYAN
 		countDown: 5,
 		role: 0,
 		description: "Thay đổi dấu lệnh của bot trong box chat của bạn hoặc cả hệ thống bot (chỉ admin bot)",
-		category: "config",
+		category: "𝗖𝗢𝗡𝗙𝗜𝗚",
 		guide: {
-			vi: "   {pn} <new prefix>: thay đổi prefix mới trong box chat của bạn"
-				+ "\n   Ví dụ:"
-				+ "\n    {pn} #"
-				+ "\n\n   {pn} <new prefix> -g: thay đổi prefix mới trong hệ thống bot (chỉ admin bot)"
-				+ "\n   Ví dụ:"
-				+ "\n    {pn} # -g"
-				+ "\n\n   {pn} reset: thay đổi prefix trong box chat của bạn về mặc định",
-			en: "   {pn} <new prefix>: change new prefix in your box chat"
-				+ "\n   Example:"
-				+ "\n    {pn} #"
-				+ "\n\n   {pn} <new prefix> -g: change new prefix in system bot (only admin bot)"
-				+ "\n   Example:"
-				+ "\n    {pn} # -g"
-				+ "\n\n   {pn} reset: change prefix in your box chat to default"
+			vi: ""
 		}
 	},
 
 	langs: {
-		vi: {
-			reset: "Đã reset prefix của bạn về mặc định: %1",
-			onlyAdmin: "Chỉ admin mới có thể thay đổi prefix hệ thống bot",
-			confirmGlobal: "Vui lòng thả cảm xúc bất kỳ vào tin nhắn này để xác nhận thay đổi prefix của toàn bộ hệ thống bot",
-			confirmThisThread: "Vui lòng thả cảm xúc bất kỳ vào tin nhắn này để xác nhận thay đổi prefix trong nhóm chat của bạn",
-			successGlobal: "Đã thay đổi prefix hệ thống bot thành: %1",
-			successThisThread: "Đã thay đổi prefix trong nhóm chat của bạn thành: %1",
-			myPrefix: "🌐 Prefix của hệ thống: %1\n🛸 Prefix của nhóm bạn: %2"
-		},
+		vi: {},
 		en: {
 			reset: "Your prefix has been reset to default: %1",
 			onlyAdmin: "Only admin can change prefix of system bot",
@@ -45,7 +24,7 @@ module.exports = {
 			confirmThisThread: "Please react to this message to confirm change prefix in your box chat",
 			successGlobal: "Changed prefix of system bot to: %1",
 			successThisThread: "Changed prefix in your box chat to: %1",
-			myPrefix: "🌐 System prefix: %1\n🛸 Your box chat prefix: %2"
+			myPrefix: "✨ 𝐑 𝐀 𝐉 ✨\n\n❊⊰⊰ 𝐁𝐎𝐓...𝟭𝟬𝟬%⊱⊱❊\⫸ 𝐂𝐨𝐧𝐧𝐞𝐜𝐭𝐞𝐝 𝐒𝐮𝐜𝐜𝐞𝐬𝐟𝐮𝐥𝐥 ⫷\n\n❐ 🄱🄾🅃 𝐏𝐫𝐞𝐟𝐢𝐱: in [❊⊰ . ⊱❊]\n❐𝐄𝐱𝐚𝐦𝐩𝐥𝐞: ,𝐡𝐞𝐥𝐩\n───────────•••\n│👤𝐎𝐰𝐧𝐞𝐫:【 𝐑 𝐀 𝐉 ヅ 】\n│⚠𝐃𝐨𝐧'𝐭 𝐊𝐢𝐜𝐤 𝐓𝐡𝐢𝐬 𝐁𝐨𝐭!\n│✅𝐔𝐬𝐞 .𝐡𝐞𝐥𝐩 𝐓𝐨 𝐒𝐞𝐞 𝐂𝐌𝐃?\n│💟𝐓𝐡𝐚𝐧𝐤𝐬 𝐆𝐂 𝐀𝐝𝐦𝐢𝐧 𝐅𝐨𝐫 𝐀𝐝𝐝!\n│❄𝐈 𝐇𝐚𝐯𝐞 𝐍𝐨 𝐒𝐩𝐚𝐦!"
 		}
 	},
 
@@ -94,10 +73,16 @@ module.exports = {
 		}
 	},
 
-	onChat: async function ({ event, message, getLang }) {
-		if (event.body && event.body.toLowerCase() === "prefix")
-			return () => {
-				return message.reply(getLang("myPrefix", global.GoatBot.config.prefix, utils.getPrefix(event.threadID)));
-			};
-	}
-};
+  onChat: async function ({ event, message, usersData, getLang }) {
+    const data = await usersData.get(event.senderID);
+    const name = data.name;
+    const xyrene = {
+      body: getLang("myPrefix", global.GoatBot.config.prefix, utils.getPrefix(event.threadID)),
+      attachment: await global.utils.getStreamFromURL("https://ik.imagekit.io/ylceaheqh/5b6c84566b2dbe037efd96be918bd886.jpg")
+        };
+    if (event.body && event.body.toLowerCase() === "prefix")
+      return () => {
+        return message.reply(xyrene);
+      };
+  }
+  };
