@@ -1,5 +1,5 @@
 <img
-src=https://drive.google.com/uc?export=download&id=1PucyK6aRUUdoacxlShe3sNkWHBYNDnsj" alt="banner">
+src="https://i.imgur.com/hODtgg2.jpeg" alt="banner">
 
 <h1 align="center">
   <img src="https://i.imgur.com/riOGbqv.jpeg" width="22px" alt="icon">
