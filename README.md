@@ -38,9 +38,9 @@ If you find any issues, please report them!
 			<h3>Gmail:
 			<a href="mahmudx077@gmail.com" style="color: green;">MahMUDx7 </a>
 				<br>
-	𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤: <a href="https://www.facebook.com/mahmud.x07" style="color: black;">MahMUD</a></h3></div>
+	𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤: <a href="https://www.facebook.com/NOBITA.XnX.RAJ" style="color: black;">XERA PHIS →🖤🪽🍒</a></h3></div>
 
 <img align="center" src="https://i.imgur.com/UM3ekFf.jpeg"/>
 
 
-🔹Ariyan Mahmud
+🔹MOHAMMAD RAJ
