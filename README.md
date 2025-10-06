@@ -2,7 +2,7 @@
 src=https://drive.google.com/uc?export=download&id=1PucyK6aRUUdoacxlShe3sNkWHBYNDnsj" alt="banner">
 
 <h1 align="center">
-  <img src=https://drive.google.com/uc?export=download&id=1KRZoafJOsl-VAjsypF3glW-WGXUrs2kf" width="22px" alt="icon">
+  <img src="https://i.imgur.com/riOGbqv.jpeg" width="22px" alt="icon">
   WELCOME TO RAJ MASSENGAR BOT USE THE RAJ MASSENGER BOT
 </h1>
 
