@@ -3,7 +3,7 @@ src="https://i.ibb.co/RQ28H2p/banner.png" alt="banner">
 
 <h1 align="center">
   <img src="https://i.imgur.com/ZfuZrPc.jpeg" width="22px" alt="icon">
-  Goat Bot - Bot Chat Messenger
+  WELCOME TO RAJ MASSENGAR BOT USE THE RAJ MASSENGER BOT
 </h1>
 
 <p align="center">
@@ -18,25 +18,25 @@ src="https://i.ibb.co/RQ28H2p/banner.png" alt="banner">
 
 
 
-The original author of this Bot is Ntkhang. This fork is maintained by: MahMUD  
+The original author of this Bot is Ntkhang. This fork is maintained by: MOHAMMAD RAJ  
 
 If you find any issues, please report them!
 
 
-𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤: <a href="https://www.facebook.com/mahmud.x07" style="color: black;">Mah M UD</a></h3></div>
+𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤: <a href="https://www.facebook.com/NOBITA.XnX.RAJ" style="color: black;"> XERA PHIS →🖤🪽🍒 </a></h3></div>
 
 <p align="center"><a href="fb link" target="_blank" rel="noopener noreferrer">
   <img src="https://i.imgur.com/M6xV2Np.jpeg" width="100" style="margin-right: 10px;"></a>
 </p>
 <h5 align="center">
->🎀 Mah MUD
+>🎀 R A J
 </h5>
 
  
 
 <div align="center">
 			<h3>Gmail:
-			<a href="mahmudx077@gmail.com" style="color: green;">MahMUDx7 </a>
+			<a href="otcjadid@gmail.com" style="color: green;">XERA PHIS →🖤🪽🍒</a>
 				<br>
 	𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤: <a href="https://www.facebook.com/NOBITA.XnX.RAJ" style="color: black;">XERA PHIS →🖤🪽🍒</a></h3></div>
 
