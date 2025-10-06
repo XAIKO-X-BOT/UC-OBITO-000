@@ -26,7 +26,7 @@ If you find any issues, please report them!
 𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤: <a href="https://www.facebook.com/NOBITA.XnX.RAJ" style="color: black;"> XERA PHIS →🖤🪽🍒 </a></h3></div>
 
 <p align="center"><a href="fb link" target="_blank" rel="noopener noreferrer">
-  <img src="https://i.imgur.com/htOTdZ1.jpeg" width="100" style="margin-right: 10px;"></a>
+  <img src="https://i.imgur.com/2AnFkQy.jpeg" width="100" style="margin-right: 10px;"></a>
 </p>
 <h5 align="center">
 >🎀 R A J
@@ -40,7 +40,7 @@ If you find any issues, please report them!
 				<br>
 	𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤: <a href="https://www.facebook.com/NOBITA.XnX.RAJ" style="color: black;">XERA PHIS →🖤🪽🍒</a></h3></div>
 
-<img align="center" src="https://i.imgur.com/UM3ekFf.jpeg"/>
+<img align="center" src="https://i.imgur.com/htOTdZ1.jpeg"/>
 
 
 🔹MOHAMMAD RAJ
