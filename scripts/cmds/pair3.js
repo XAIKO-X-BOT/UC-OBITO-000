@@ -1,4 +1,4 @@
-.cmd install pairv3.js const { getStreamFromURL } = global.utils;
+const { getStreamFromURL } = global.utils;
 module.exports = {
   config: {
     name: "pair3",
