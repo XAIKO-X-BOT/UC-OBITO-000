@@ -18,10 +18,10 @@ config: {
     const ownerInfo = {
       name: '𝐗𝐀𝐈𝐊𝐎_𝐉𝐀𝐃𝐈𝐃 ',
       gender: 'Male',
-      age: '17',
-      height: '5"1',
-      facebookLink: 'https://www.facebook.com/NOBITA.XnX.RAJ',
-      nick: '𝐗𝐀𝐈𝐊𝐎💀'
+      age: 'hide',
+      height: '5"6',
+      facebookLink: 'https://www.facebook.com/UC.OBITO.2008',
+      nick: '𝐗𝐀𝐈𝐊𝐎 💀'
     };
 
     const bold = 'https://ik.imagekit.io/ylceaheqh/lv_7545708159545969981_20251004101935.mp4'; 
