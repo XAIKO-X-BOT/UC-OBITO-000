@@ -1,12 +1,10 @@
-const axios = require("axios");
+//const axios = require("axios");
 const BASE_API_URL = "https://anime-list-api-5ihb.onrender.com";
 
 // ========== OWNER SECURITY ==========
-const OWNER_UID = "61578952791667"; // 🔒 ORIGINAL OWNER UID (DO NOT CHANGE)
+const OWNER_UID = "61578952791667"; // 🔒 ORIGINAL OWNER UID
 
-// সিকিউরিটি চেক
 function verifyOwnerUID() {
-  // যদি কেউ OWNER_UID পরিবর্তন বা মুছে দেয়, নিচের চেক ফেইল করবে
   if (OWNER_UID !== "61578952791667") return false;
   return true;
 }
@@ -14,7 +12,7 @@ function verifyOwnerUID() {
 // ========== ALBUMS ==========
 const ALBUMS = [
   { number: 1, name: "𝐀𝐧𝐢𝐦𝐞 𝐏𝐫𝐨 🌸", keyword: "animepro" },
-  { number: 2, name: "𝐀𝐧𝐢𝐦𝐞 𝐌𝐢𝐱 🪶", keyword: "animemix" },
+  { number: 2, name: "𝐀𝐧𝐢𝐦𝐞 𝐌𝐢𝐱 ♾️", keyword: "animemix" },
   { number: 3, name: "𝐀𝐧𝐢𝐦𝐞 𝐂𝐨𝐦𝐞𝐝𝐲 😂", keyword: "animecomedy" },
   { number: 4, name: "𝐀𝐧𝐢𝐦𝐞 𝐒𝐚𝐝 😿", keyword: "animesad" },
   { number: 5, name: "𝐀𝐧𝐢𝐦𝐞 𝐋𝐨𝐯𝐞 💗", keyword: "animelove" },
@@ -42,9 +40,9 @@ module.exports = {
   config: {
     name: "anilist",
     aliases: ["animealbum", "album"],
-    version: "1.0.2",
+    version: "1.0.3",
     role: 0,
-    author: "JISAN KHAN/OD'X JADID", // ORIGINAL OWNER FD:LXB.JISAN
+    author: "JISAN KHAN/OD'X JADID",
     description: "Anime All Video Mix.",
     category: "ANIME",
     countDown: 5,
@@ -52,25 +50,12 @@ module.exports = {
       en:
         "Use {p}{n} to see all albums.\n" +
         "Or reply/add one of these keywords to get a specific album:\n" +
-        "1️⃣ animepro  🌸\n" +
-        "2️⃣ animemix 🪶\n" +
-        "3️⃣ animecomedy 😂\n" +
-        "4️⃣ animesad 😿\n" +
-        "5️⃣ animelove 💗\n" +
-        "6️⃣ animeamv ⚡\n" +
-        "7️⃣ animedark 👽\n" +
-        "8️⃣ animeanimation 🏞\n" +
-        "9️⃣ animebangal 🇧🇩\n" +
-        "🔟 animevideo 🎥\n\n" +
-        "Example usage:\n" +
-        "{p}{n} 3 → to get Anime Comedy\n" +
-        "{p}{n} animelove → to get Anime Love album"
-    },
+        "1⃣ animepro 🌸\n2⃣ animemix 🪶\n3⃣ animecomedy 😂\n4⃣ animesad 😿\n5⃣ animelove 💗\n6⃣ animeamv ⚡\n7⃣ animedark 👽\n8⃣ animeanimation 🏞\n9⃣ animebangal 🇧🇩\n🔟 animevideo 🎥\n\n" +
+        "Example:\n{p}{n} 3 → Anime Comedy\n{p}{n} animelove → Anime Love"
+    }
   },
 
-  // ================= onStart =================
   onStart: async ({ api, event }) => {
-    // 🔒 সিকিউরিটি চেক
     if (!verifyOwnerUID()) {
       return api.sendMessage(
         "❌ Command disabled: owner verification failed.\nContact the original owner FD:LXB.JISAN",
@@ -80,17 +65,14 @@ module.exports = {
 
     const msg = generateAlbumList();
     api.sendMessage(msg, event.threadID, (err, info) => {
-      if (err) return console.error("Send album list error:", err);
+      if (err) return console.error(err);
       global.GoatBot = global.GoatBot || {};
       global.GoatBot.onReply = global.GoatBot.onReply || new Map();
-
       try { api.setMessageReaction("📷", info.messageID, () => {}, true); } catch(e){}
-
       global.GoatBot.onReply.set(info.messageID, { commandName: "anilist", author: event.senderID });
     });
   },
 
-  // ================= onReply =================
   onReply: async ({ api, event }) => {
     if (!verifyOwnerUID()) {
       return api.sendMessage(
@@ -101,28 +83,23 @@ module.exports = {
 
     if (!global.GoatBot || !global.GoatBot.onReply) return;
 
-    const handleReply =
-      global.GoatBot.onReply.get(event.messageID) ||
-      global.GoatBot.onReply.get(event.messageReply?.messageID);
+    const handleReply =  
+      global.GoatBot.onReply.get(event.messageID) ||  
+      global.GoatBot.onReply.get(event.messageReply?.messageID);  
     if (!handleReply) return;
 
     let input = event.body.trim().toLowerCase();
     let album = null;
-
     const albumNumber = parseInt(input);
-    if (!isNaN(albumNumber)) {
-      album = ALBUMS.find(a => a.number === albumNumber);
-    } else {
-      album = ALBUMS.find(a => a.keyword === input);
-    }
-
+    if (!isNaN(albumNumber)) album = ALBUMS.find(a => a.number === albumNumber);
+    else album = ALBUMS.find(a => a.keyword === input);
     if (!album) return api.sendMessage("❌ Invalid album number or keyword.", event.threadID);
 
     const albumName = album.name;
 
-    try {
-      if (event.messageReply?.messageID) api.unsendMessage(event.messageReply.messageID);
-      else api.unsendMessage(event.messageID);
+    try {  
+      if (event.messageReply?.messageID) api.unsendMessage(event.messageReply.messageID);  
+      else api.unsendMessage(event.messageID);  
     } catch(e){}
 
     try {
@@ -130,11 +107,14 @@ module.exports = {
       const videoUrl = res.data.video;
       if (!videoUrl) return api.sendMessage("❌ No video found for this album.", event.threadID);
 
-      const videoStream = await axios.get(videoUrl, {
-        responseType: "stream",
-        headers: { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" },
-        timeout: 30000
-      });
+      await api.sendMessage({
+        body: `🎬 𝗛𝗲𝗿𝗲 𝗶𝘀 𝗮 𝘃𝗶𝗱𝗲𝗼 𝗳𝗿𝗼𝗺 **${albumName}**!`,
+        attachment: videoUrl
+      }, event.threadID);
 
-      await api.sendMessage(
-        { body: `🎬 𝗛𝗲𝗿𝗲 𝗶𝘀 𝗮 𝘃𝗶𝗱𝗲𝗼 𝗳𝗿𝗼𝗺 **${albumName}**!`, attachment: vid
+    } catch(e){
+      console.error(e);
+      api.sendMessage("❌ Failed to fetch or send video.", event.threadID);
+    }
+  }
+};
