@@ -20,7 +20,7 @@ config: {
       gender: 'Male',
       age: 'hide',
       height: '5"6',
-      facebookLink: 'https://www.facebook.com/UC.OBITO.2008',
+      facebookLink: 'https://www.facebook.com/XERA.PHIS.2008',
       nick: '𝐗𝐀𝐈𝐊𝐎 💀'
     };
 
