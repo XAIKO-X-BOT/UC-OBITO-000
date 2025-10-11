@@ -1,4 +1,4 @@
-nst axios = require("axios");
+const axios = require("axios");
 const BASE_API_URL = "https://anime-list-api-5ihb.onrender.com";
 
 // ========== OWNER SECURITY ==========
@@ -44,7 +44,7 @@ module.exports = {
     aliases: ["animealbum", "album"],
     version: "1.0.2",
     role: 0,
-    author: JISAN KHAN // XAIKO_JADID
+    author: "JISAN KHAN/OD'X JADID", // ORIGINAL OWNER FD:LXB.JISAN
     description: "Anime All Video Mix.",
     category: "ANIME",
     countDown: 5,
@@ -137,4 +137,4 @@ module.exports = {
       });
 
       await api.sendMessage(
-        { body: `🎬 𝗛𝗲𝗿𝗲 𝗶𝘀 𝗮 𝘃𝗶𝗱𝗲𝗼 𝗳𝗿𝗼𝗺 **${albumName}**!`, attachment: videoStream.da
+        { body: `🎬 𝗛𝗲𝗿𝗲 𝗶𝘀 𝗮 𝘃𝗶𝗱𝗲𝗼 𝗳𝗿𝗼𝗺 **${albumName}**!`, attachment: vid
